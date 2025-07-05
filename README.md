@@ -1,0 +1,3 @@
+To generate the PDF, we used DOMPDF. We found out that it's necessary to edit the php.ini file so that it can generate images. To enable image generation, you need to go to the folder xampp/php/php.ini, open the php.ini file, look for ;extension=gd, remove the semicolon (";"), and then save the file.
+
+Regarding file uploads, Apache's default upload limit is 40MB, so we increased it to 100MB by editing the same php.ini file. We changed the value from 40M to 100M in both post_max_size and upload_max_filesize, then save the file. In our system, we set the maximum allowed file upload size to 100MB.
