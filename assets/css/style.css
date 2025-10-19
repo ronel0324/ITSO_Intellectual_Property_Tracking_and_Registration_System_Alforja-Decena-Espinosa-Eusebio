@@ -1254,7 +1254,7 @@ th {
 /* Special rule for completed (7 columns) */
 .table-completed .table-header,
 .table-completed .table-row-card {
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .table-header {

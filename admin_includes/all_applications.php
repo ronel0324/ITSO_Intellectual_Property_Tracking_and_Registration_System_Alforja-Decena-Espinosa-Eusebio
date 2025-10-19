@@ -649,6 +649,8 @@ async function loadPendingApplications() {
 // Run every 2 seconds
 setInterval(loadPendingApplications, 2000);
 loadPendingApplications();
+
+
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
