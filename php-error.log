@@ -1,0 +1,25 @@
+[23-Sep-2025 12:59:43 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'id' in 'field list' in C:\xampp\htdocs\itso_testing\add_entry1.php:61
+Stack trace:
+#0 C:\xampp\htdocs\itso_testing\add_entry1.php(61): mysqli->query('SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\itso_testing\add_entry1.php on line 61
+[23-Sep-2025 12:59:56 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'id' in 'field list' in C:\xampp\htdocs\itso_testing\add_entry1.php:61
+Stack trace:
+#0 C:\xampp\htdocs\itso_testing\add_entry1.php(61): mysqli->query('SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\itso_testing\add_entry1.php on line 61
+[23-Sep-2025 12:59:59 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'id' in 'field list' in C:\xampp\htdocs\itso_testing\add_entry1.php:61
+Stack trace:
+#0 C:\xampp\htdocs\itso_testing\add_entry1.php(61): mysqli->query('SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\itso_testing\add_entry1.php on line 61
+[23-Sep-2025 13:00:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'id' in 'field list' in C:\xampp\htdocs\itso_testing\add_entry1.php:63
+Stack trace:
+#0 C:\xampp\htdocs\itso_testing\add_entry1.php(63): mysqli->query('SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\itso_testing\add_entry1.php on line 63
+[23-Sep-2025 13:00:58 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'id' in 'field list' in C:\xampp\htdocs\itso_testing\add_entry1.php:63
+Stack trace:
+#0 C:\xampp\htdocs\itso_testing\add_entry1.php(63): mysqli->query('SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\itso_testing\add_entry1.php on line 63

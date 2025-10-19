@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #28453D, #066b6b);
+  background-size: cover;
+}
+
+.wrapper {
+  position: relative;
+  width: 900px;
+  height: 550px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.407);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Left logo side */
+.info-text {
+  flex: 1;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-text img {
+  width: 70%;
+  opacity: 0.95;
+}
+
+/* Right form side */
+.form-box {
+  flex: 1;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #e0f7f7;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.input-box {
+  position: relative;
+  margin: 18px 0;
+}
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+.input-box input:focus,
+.input-box select:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+.input-box label {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  color: #e5e5e572;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.input-box input:valid ~ label,
+.input-box input:focus ~ label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #ffffff;
+  background: rgba(255,255,255,0.15);
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #0bb5b5;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #099191;
+}
+
+/* Links */
+.logreg-link {
+  text-align: center;
+  margin-top: 15px;
+}
+.logreg-link a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.logreg-link a:hover {
+  color: #aef8f8;
+}
+
+/* Error message */
+.error-message {
+  text-align: center;
+  color: #ffb3b3;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .wrapper {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .info-text {
+    display: none;
+  }
+}
+
+/* ==== GLASSMORPHIC SELECT DROPDOWNS ==== */
+.select-box {
+  position: relative;
+  margin: 18px 0;
+}
+
+.select-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #e5e5e5;
+  letter-spacing: 0.3px;
+}
+
+.select-box select {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #e5e5e572;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+/* On hover/focus - more visible and highlighted */
+.select-box select:hover,
+.select-box select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 2px #0bb5b5;
+}
+
+/* Custom arrow design */
+.select-box::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 13px;
+  color: #0bb5b5;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.select-box select:focus ~ ::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+
+/* Dropdown menu styling (for modern browsers) */
+select option {
+  background: #0b6363;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+}
+
