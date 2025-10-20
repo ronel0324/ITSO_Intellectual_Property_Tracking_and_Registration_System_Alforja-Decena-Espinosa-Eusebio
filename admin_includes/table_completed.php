@@ -122,7 +122,7 @@ $result = $conn->query($sql);
     <div>Submitted to ITSO</div>
     <div>Submitted to IPOPHIL</div>
     <div>Expiration Date</div>
-    <div>Action</div>
+    <div></div>
   </div>
 
   <div class="table-body">

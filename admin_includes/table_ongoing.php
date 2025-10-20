@@ -255,7 +255,7 @@ $result = $conn->query($sql);
     <div>Classification</div>
     <div>Status</div>
     <div>Campus</div>
-    <div>Action</div>
+    <div></div>
   </div>
 
   <!-- Table Body -->
