@@ -1246,7 +1246,16 @@ th {
 
 .table-header, .table-body .table-row-card {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  align-items: center;
+}
+
+/* Special rule for ongoing (6 columns) */
+.table-ongoing .table-header,
+.table-ongoing .table-row-card {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   text-align: center;
   align-items: center;
 }

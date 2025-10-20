@@ -608,36 +608,38 @@ async function loadPendingApplications() {
     if (data.length > 0) {
       data.forEach(row => {
         newHTML += `
-          <div class="table-row-card">
-            <div data-label="Title">
-              <strong>${row.title}</strong><br>
-              <small class="tracking-id" onclick="copyToClipboard('${row.tracking_id}', this)">
-                <ion-icon name="copy-outline" style="font-size: 12px;"></ion-icon>
-                ${row.tracking_id}
-              </small>
-            </div>
-            <div data-label="Classification">${row.classification}</div>
-            <div data-label="Status"><span class="status-badge status-pending">${row.status}</span></div>
-            <div data-label="Campus">${row.campus_name}</div>
-            <div data-label="Action">
-              <form method="POST" action="update_status.php" style="display:inline;">
-                <input type="hidden" name="ip_id" value="${row.ip_id}">
-                <input type="hidden" name="new_status" value="Ongoing">
-                <input type="hidden" name="source" value="admin_dashboard.php?page=all_applications">
-                <button type="submit" class="accept-btn"><ion-icon name="checkmark-circle-outline"></ion-icon></button>
-              </form>
-              <form method="POST" action="delete.php" onsubmit="return confirm('Delete this record?')" style="display:inline;">
-                <input type="hidden" name="ip_id" value="${row.ip_id}">
-                <button type="submit" class="delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
-              </form>
-            </div>
-          </div>`;
+  <div class="table-row-card">
+    <div data-label="Title">
+      <strong>${row.title}</strong><br>
+      <small class="tracking-id" onclick="copyToClipboard('${row.tracking_id}', this)">
+        <ion-icon name="copy-outline" style="font-size: 12px;"></ion-icon>
+        ${row.tracking_id}
+      </small>
+    </div>
+    <div data-label="Classification">${row.classification}</div>
+    <div data-label="Status"><span class="status-badge status-pending">${row.status}</span></div>
+    <div data-label="Campus">${row.campus_name}</div>
+    <div data-label="Department">${row.department_name}</div>
+    <div data-label="Remarks">${row.remarks ? `<span style="color: #e74c3c;">⚠ ${row.remarks}</span>` : ''}</div>
+    <div data-label="Action">
+      <form method="POST" action="update_status.php" style="display:inline;">
+        <input type="hidden" name="ip_id" value="${row.ip_id}">
+        <input type="hidden" name="new_status" value="Ongoing">
+        <input type="hidden" name="source" value="admin_dashboard.php?page=all_applications">
+        <button type="submit" class="accept-btn"><ion-icon name="checkmark-circle-outline"></ion-icon></button>
+      </form>
+      <form method="POST" action="delete.php" onsubmit="return confirm('Delete this record?')" style="display:inline;">
+        <input type="hidden" name="ip_id" value="${row.ip_id}">
+        <button type="submit" class="delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
+      </form>
+    </div>
+  </div>
+`;
       });
     } else {
       newHTML = `<p class="no-data">No pending applications</p>`;
     }
 
-    // Update only if changed
     if (tableBody.innerHTML.trim() !== newHTML.trim()) {
       tableBody.innerHTML = newHTML;
     }
@@ -646,7 +648,6 @@ async function loadPendingApplications() {
   }
 }
 
-// Run every 2 seconds
 setInterval(loadPendingApplications, 2000);
 loadPendingApplications();
 

@@ -118,9 +118,9 @@ if (!empty($queryParams)) {
         while ($campus = $campusResult->fetch_assoc()):
             $isActive = ($campusFilter == $campus['campus_id']) ? "active" : "";
         ?>
-            <a href="?page=reports&campus=<?= $campus['campus_id'] ?><?= isset($_GET['year']) ? '&year=' . $_GET['year'] : '' ?><?= isset($_GET['department_id']) ? '&department_id=' . urlencode($_GET['department_id']) : '' ?>"
-               class="campus-btn <?= $isActive ?>">
-               <?= htmlspecialchars($campus['campus_name']) ?>
+            <a href="?page=reports&campus=<?= $campus['campus_id'] ?><?= isset($_GET['year']) ? '&year=' . $_GET['year'] : '' ?>"
+            class="campus-btn <?= $isActive ?>">
+            <?= htmlspecialchars($campus['campus_name']) ?>
             </a>
         <?php endwhile; ?>
     </div>

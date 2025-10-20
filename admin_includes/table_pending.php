@@ -1,9 +1,10 @@
 <?php
 include 'db_connect.php';
 $sql = "
-  SELECT ip.*, c.campus_name 
+  SELECT ip.*, c.campus_name, d.department_name
   FROM intellectual_properties ip
   LEFT JOIN campuses c ON ip.campus_id = c.campus_id
+  LEFT JOIN departments d ON ip.department_id = d.department_id
   WHERE ip.status = 'Pending'
 ";
 $result = $conn->query($sql);
@@ -16,6 +17,7 @@ $result = $conn->query($sql);
     <div>Classification</div>
     <div>Status</div>
     <div>Campus</div>
+    <div>Department</div>
     <div></div>
   </div>
 

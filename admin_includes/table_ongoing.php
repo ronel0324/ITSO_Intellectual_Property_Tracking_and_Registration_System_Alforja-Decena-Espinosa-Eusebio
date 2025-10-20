@@ -248,13 +248,14 @@ $result = $conn->query($sql);
 }
 </style>
 
-<div class="table-container">
+<div class="table-container table-ongoing">
   <!-- Table Header -->
   <div class="table-header">
     <div>Title</div>
     <div>Classification</div>
     <div>Status</div>
     <div>Campus</div>
+    <div>Department</div>
     <div></div>
   </div>
 
@@ -305,6 +306,7 @@ $result = $conn->query($sql);
                     <span class='status-badge status-ongoing'>{$row['status']}</span>
                 </div>
                 <div date-label='Campus'>{$row['campus_name']}</div>
+                <div data-label='Department'>" . htmlspecialchars($row['department_name'], ENT_QUOTES) . "</div>
                 <div data-label='Action'>
                     <!-- Review Button -->
                     <button type='button' class='review-btn' 
